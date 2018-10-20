@@ -3,7 +3,7 @@
 
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
+	font-size: 1em;
 	color: #333;
 	line-height: 1.5;
 }
@@ -38,6 +38,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+ 
+}
+.inside #maincontent{
   display: flex;
   flex-wrap: wrap;
 }
@@ -225,8 +228,12 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+  width: 90%;  
+  border-radius: 30px;
+  -moz-border-radius: 30px 0 0 0;
+  -webkit-border-radius: 30px 0 0 0;
 }
+
 #restaurant-address {
   font-size: 12pt;
   margin: 10px 0px;
@@ -270,10 +277,55 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  
   position: relative;
   width: 85%;
+
+  border-radius: 30px;
+  -moz-border-radius: 30px 0 0 0;
+  -webkit-border-radius: 30px 0 0 0;
 }
+
+#reviews-list li div[aria-describedby="head"]{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: black;
+  border-radius: 30px;
+    -moz-border-radius: 30px 0 0 0;
+    -webkit-border-radius: 30px 0 0 0;
+    padding: 10px 10px 0 20px;
+}
+#reviews-list li div[aria-describedby="head"] p.review-name{
+  color: white;
+  font-size: 1.5em;
+  
+}
+#reviews-list li div[aria-describedby="head"] p.review-date {
+  color: gainsboro;
+  font-size: 1em;
+  
+}
+#reviews-list li div[aria-describedby="content"]{
+  padding: 0 20px 20px;
+}
+#reviews-list li div[aria-describedby="rating"]{
+  background-color: orange;
+    width: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+   
+}
+#reviews-list li div[aria-describedby="rating"] p{
+  color: white;
+  font-size: 1.5em;
+}
+
 #reviews-list li p {
   margin: 0 0 10px;
 }
