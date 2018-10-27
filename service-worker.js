@@ -9,7 +9,6 @@ var CACHE_FILES = [
     'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
     'js/dbhelper.js',
     'js/main.js',
-    'https://code.jquery.com/jquery-3.3.1.min.js',
     'js/restaurant_info.js',
    // 'js/app.js',
     'data/restaurants.json',
