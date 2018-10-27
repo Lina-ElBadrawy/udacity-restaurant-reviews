@@ -286,7 +286,7 @@ nav h1 a {
   -webkit-border-radius: 30px 0 0 0;
 }
 
-#reviews-list li div[aria-describedby="head"]{
+#reviews-list li div[role="head"]{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -296,20 +296,20 @@ nav h1 a {
     -webkit-border-radius: 30px 0 0 0;
     padding: 10px 10px 0 20px;
 }
-#reviews-list li div[aria-describedby="head"] p.review-name{
+#reviews-list li div[role="head"] p.review-name{
   color: white;
   font-size: 1.5em;
   
 }
-#reviews-list li div[aria-describedby="head"] p.review-date {
+#reviews-list li div[role="head"] p.review-date {
   color: gainsboro;
   font-size: 1em;
   
 }
-#reviews-list li div[aria-describedby="content"]{
+#reviews-list li div[role="content"]{
   padding: 0 20px 20px;
 }
-#reviews-list li div[aria-describedby="rating"]{
+#reviews-list li div[role="rating"]{
   background-color: orange;
     width: 100px;
     text-transform: uppercase;
@@ -320,7 +320,7 @@ nav h1 a {
     -webkit-border-radius: 5px;
    
 }
-#reviews-list li div[aria-describedby="rating"] p{
+#reviews-list li div[role="rating"] p{
   color: white;
   font-size: 1.5em;
 }

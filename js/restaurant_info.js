@@ -82,6 +82,7 @@ fetchRestaurantFromURL = (callback) => {
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
+  name.tabIndex=0;
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
@@ -90,10 +91,11 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt=restaurant.name;
+  image.tabIndex=0
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
-
+  cuisine.tabIndex=0;
   // fill operating hours
   if (restaurant.operating_hours) {
     fillRestaurantHoursHTML();
@@ -150,14 +152,17 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   const head=document.createElement('div');
-  head.setAttribute( "aria-describedby","head");
+  head.setAttribute( "role","head");
   const content=document.createElement('div');
-  content.setAttribute( "aria-describedby","content");
+  content.setAttribute( "role","content");
+  content.tabindex=0;
   const ratingContainer=document.createElement('div');
-  ratingContainer.setAttribute("aria-describedby","rating");
+  ratingContainer.setAttribute("role","rating");
+  ratingContainer.tabIndex=0;
   const name = document.createElement('p');
   name.classList.add("review-name");
   name.innerHTML = review.name;
+  name.tabIndex=0;
   li.appendChild(head);
   li.appendChild(content);
   head.appendChild(name);
@@ -165,6 +170,7 @@ createReviewHTML = (review) => {
   const date = document.createElement('p');
   date.classList.add("review-date");
   date.innerHTML = review.date;
+  date.tabIndex=0;;
   head.appendChild(date);
 
   const rating = document.createElement('p');
@@ -174,6 +180,7 @@ createReviewHTML = (review) => {
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
+  comments.tabIndex=0;
   content.appendChild(comments);
 
   return li;
