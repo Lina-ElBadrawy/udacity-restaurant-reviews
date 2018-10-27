@@ -25,6 +25,9 @@ a:hover, a:focus {
 	color: #3397db;
 	text-decoration: none;
 }
+img{
+  object-fit: cover;
+}
 a img{
 	border: none 0px #fff;
 }
@@ -197,7 +200,7 @@ nav h1 a {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 2000;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;

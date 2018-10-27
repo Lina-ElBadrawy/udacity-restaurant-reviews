@@ -86,6 +86,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
+  address.tabIndex=0;
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
@@ -114,10 +115,12 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 
     const day = document.createElement('td');
     day.innerHTML = key;
+    day.tabIndex=0;
     row.appendChild(day);
 
     const time = document.createElement('td');
     time.innerHTML = operatingHours[key];
+    time.tabIndex=0;
     row.appendChild(time);
 
     hours.appendChild(row);
